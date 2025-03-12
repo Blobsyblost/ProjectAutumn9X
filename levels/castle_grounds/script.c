@@ -60,6 +60,8 @@ const LevelScript level_castle_grounds_entry[] = {
 		OBJECT(MODEL_CASTLE_GROUNDS_BUBBLY_TREE, -1051, 14, 1271, 0, 0, 0, (10 << 16), bhvTree),
 		OBJECT(MODEL_CASTLE_CASTLE_DOOR, -1321, -41, -15, 0, 90, 0, (1 << 16), bhvDoorWarp),
 		OBJECT(MODEL_CASTLE_CASTLE_DOOR, -1485, 702, 4454, 0, 0, 0, (2 << 24) | (2 << 16) | (2 << 8) | (2), bhvDoorWarp),
+		OBJECT(MODEL_NONE, 2285, 950, 2185, 0, 0, 0, 0x00000000, bhvGoomba),
+		OBJECT(MODEL_NONE, 1976, 950, -1665, 0, 0, 0, 0x00000000, bhvGoomba),
 		MARIO_POS(0x01, 0, -985, 492, 6108),
 		OBJECT(MODEL_NONE, -985, 492, 6108, 0, 0, 0, (10 << 16), bhvSpinAirborneWarp),
 		OBJECT(MODEL_NONE, -2060, 526, 6817, 0, 0, 0, 0x00000000, bhvWaterfallSoundLoop),
