@@ -20,14 +20,14 @@ const GeoLayout mario_geo_face_and_wings[] = {
          GEO_CLOSE_NODE(),
          GEO_SWITCH_CASE(0, geo_switch_mario_eyes),
          GEO_OPEN_NODE(),
-            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_cap_off_eyes_front),
-            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_cap_off_eyes_half_closed),
-            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_cap_off_eyes_closed),
-            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_cap_off_eyes_right), // unused
-            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_cap_off_eyes_left), // unused
-            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_cap_off_eyes_up), // unused
-            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_cap_off_eyes_down), // unused
-            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_cap_off_eyes_dead),
+            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_cap_on_eyes_front),
+            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_cap_on_eyes_half_closed),
+            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_cap_on_eyes_closed),
+            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_cap_on_eyes_right), // unused
+            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_cap_on_eyes_left), // unused
+            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_cap_on_eyes_up), // unused
+            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_cap_on_eyes_down), // unused
+            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_cap_on_eyes_dead),
          GEO_CLOSE_NODE(),
       GEO_CLOSE_NODE(),
       GEO_TRANSLATE_ROTATE(0, 142, -51, -126, 22, -40, -135),
@@ -306,14 +306,14 @@ const GeoLayout mario_geo_low_poly_face_and_wings[] = {
          GEO_CLOSE_NODE(),
          GEO_SWITCH_CASE(0, geo_switch_mario_eyes),
          GEO_OPEN_NODE(),
-            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_low_poly_cap_off_eyes_front),
-            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_low_poly_cap_off_eyes_half_closed),
-            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_low_poly_cap_off_eyes_closed),
-            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_low_poly_cap_off_eyes_right), // unused
-            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_low_poly_cap_off_eyes_left), // unused
-            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_low_poly_cap_off_eyes_up), // unused
-            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_low_poly_cap_off_eyes_down), // unused
-            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_low_poly_cap_off_eyes_dead),
+            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_low_poly_cap_on_eyes_front),
+            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_low_poly_cap_on_eyes_half_closed),
+            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_low_poly_cap_on_eyes_closed),
+            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_low_poly_cap_on_eyes_right), // unused
+            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_low_poly_cap_on_eyes_left), // unused
+            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_low_poly_cap_on_eyes_up), // unused
+            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_low_poly_cap_on_eyes_down), // unused
+            GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_low_poly_cap_on_eyes_dead),
          GEO_CLOSE_NODE(),
       GEO_CLOSE_NODE(),
       GEO_TRANSLATE_ROTATE(0, 142, -51, -126, 22, -40, -135),
@@ -475,14 +475,14 @@ const GeoLayout mario_vanish_geo_face_and_wings[] = {
          GEO_CLOSE_NODE(),
          GEO_SWITCH_CASE(0, geo_switch_mario_eyes),
          GEO_OPEN_NODE(),
-            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_cap_off_eyes_front),
-            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_cap_off_eyes_half_closed),
-            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_cap_off_eyes_closed),
-            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_cap_off_eyes_right), // unused
-            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_cap_off_eyes_left), // unused
-            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_cap_off_eyes_up), // unused
-            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_cap_off_eyes_down), // unused
-            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_cap_off_eyes_dead),
+            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_cap_on_eyes_front),
+            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_cap_on_eyes_half_closed),
+            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_cap_on_eyes_closed),
+            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_cap_on_eyes_right), // unused
+            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_cap_on_eyes_left), // unused
+            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_cap_on_eyes_up), // unused
+            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_cap_on_eyes_down), // unused
+            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_cap_on_eyes_dead),
          GEO_CLOSE_NODE(),
       GEO_CLOSE_NODE(),
       GEO_TRANSLATE_ROTATE(0, 142, -51, -126, 22, -40, -135),
@@ -761,14 +761,14 @@ const GeoLayout mario_vanish_geo_low_poly_face_and_wings[] = {
          GEO_CLOSE_NODE(),
          GEO_SWITCH_CASE(0, geo_switch_mario_eyes),
          GEO_OPEN_NODE(),
-            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_low_poly_cap_off_eyes_front),
-            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_low_poly_cap_off_eyes_half_closed),
-            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_low_poly_cap_off_eyes_closed),
-            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_low_poly_cap_off_eyes_right),
-            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_low_poly_cap_off_eyes_left),
-            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_low_poly_cap_off_eyes_up),
-            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_low_poly_cap_off_eyes_down),
-            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_low_poly_cap_off_eyes_dead),
+            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_low_poly_cap_on_eyes_front),
+            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_low_poly_cap_on_eyes_half_closed),
+            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_low_poly_cap_on_eyes_closed),
+            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_low_poly_cap_on_eyes_right),
+            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_low_poly_cap_on_eyes_left),
+            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_low_poly_cap_on_eyes_up),
+            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_low_poly_cap_on_eyes_down),
+            GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_low_poly_cap_on_eyes_dead),
          GEO_CLOSE_NODE(),
       GEO_CLOSE_NODE(),
       GEO_TRANSLATE_ROTATE(0, 142, -51, -126, 22, -40, -135),
@@ -918,7 +918,7 @@ const GeoLayout mario_metal_geo_face_and_wings[] = {
       GEO_SWITCH_CASE(0, geo_switch_mario_cap_on_off),
       GEO_OPEN_NODE(),
          GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_metal_cap_on_shared_dl),
-         GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_metal_cap_off_shared_dl),
+         GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_metal_cap_on_shared_dl),
       GEO_CLOSE_NODE(),
       GEO_TRANSLATE_ROTATE(0, 142, -51, -126, 22, -40, -135),
       GEO_OPEN_NODE(),
@@ -1184,7 +1184,7 @@ const GeoLayout mario_metal_geo_low_poly_face_and_wings[] = {
       GEO_SWITCH_CASE(0, geo_switch_mario_cap_on_off),
       GEO_OPEN_NODE(),
          GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_metal_low_poly_cap_on),
-         GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_metal_low_poly_cap_off),
+         GEO_DISPLAY_LIST(LAYER_OPAQUE, mario_metal_low_poly_cap_on),
       GEO_CLOSE_NODE(),
       GEO_TRANSLATE_ROTATE(0, 142, -51, -126, 22, -40, -135),
       GEO_OPEN_NODE(),
@@ -1333,7 +1333,7 @@ const GeoLayout mario_metal_vanish_geo_face_and_wings[] = {
       GEO_SWITCH_CASE(0, geo_switch_mario_cap_on_off),
       GEO_OPEN_NODE(),
          GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_metal_cap_on_shared_dl),
-         GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_metal_cap_off_shared_dl),
+         GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_metal_cap_on_shared_dl),
       GEO_CLOSE_NODE(),
       GEO_TRANSLATE_ROTATE(0, 142, -51, -126, 22, -40, -135),
       GEO_OPEN_NODE(),
@@ -1602,7 +1602,7 @@ const GeoLayout mario_metal_vanish_geo_low_poly_face_and_wings[] = {
       GEO_SWITCH_CASE(0, geo_switch_mario_cap_on_off),
       GEO_OPEN_NODE(),
          GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_metal_low_poly_cap_on),
-         GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_metal_low_poly_cap_off),
+         GEO_DISPLAY_LIST(LAYER_TRANSPARENT, mario_metal_low_poly_cap_on),
       GEO_CLOSE_NODE(),
       GEO_TRANSLATE_ROTATE(0, 142, -51, -126, 22, -40, -135),
       GEO_OPEN_NODE(),

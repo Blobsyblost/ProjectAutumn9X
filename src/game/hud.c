@@ -404,7 +404,7 @@ void render_hud_breath_meter(void) {
  * Renders the amount of lives Mario has.
  */
 void render_hud_mario_lives(void) {
-    print_text(GFX_DIMENSIONS_RECT_FROM_LEFT_EDGE(22), HUD_TOP_Y, ","); // 'Mario Head' glyph
+    print_text(GFX_DIMENSIONS_RECT_FROM_LEFT_EDGE(22), HUD_TOP_Y, "M"); // 'Mario Head' glyph
     print_text(GFX_DIMENSIONS_RECT_FROM_LEFT_EDGE(38), HUD_TOP_Y, "*"); // 'X' glyph
     print_text_fmt_int(GFX_DIMENSIONS_RECT_FROM_LEFT_EDGE(54), HUD_TOP_Y, "%d", gHudDisplay.lives);
 }
@@ -425,7 +425,7 @@ void render_debug_mode(void) {
  * Renders the amount of coins collected.
  */
 void render_hud_coins(void) {
-    print_text(HUD_COINS_X, HUD_TOP_Y, "$"); // 'Coin' glyph
+    print_text(HUD_COINS_X, HUD_TOP_Y, "C"); // 'Coin' glyph
     print_text((HUD_COINS_X + 16), HUD_TOP_Y, "*"); // 'X' glyph
     print_text_fmt_int((HUD_COINS_X + 30), HUD_TOP_Y, "%d", gHudDisplay.coins);
 }
@@ -436,8 +436,8 @@ void render_hud_coins(void) {
  */
 void render_hud_stars(void) {
     if (gHudFlash == HUD_FLASH_STARS && gGlobalTimer & 0x8) return;
-    s8 showX = (gHudDisplay.stars < 100);
-    print_text(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(HUD_STARS_X), HUD_TOP_Y, "^"); // 'Star' glyph
+    s8 showX = TRUE;
+    print_text(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(HUD_STARS_X), HUD_TOP_Y, "S"); // 'Star' glyph
     if (showX) print_text((GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(HUD_STARS_X) + 16), HUD_TOP_Y, "*"); // 'X' glyph
     print_text_fmt_int((showX * 14) + GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(HUD_STARS_X - 16),
                        HUD_TOP_Y, "%d", gHudDisplay.stars);
@@ -449,9 +449,13 @@ void render_hud_stars(void) {
  */
 void render_hud_keys(void) {
     s16 i;
-
-    for (i = 0; i < gHudDisplay.keys; i++) {
-        print_text((i * 16) + 220, 142, "|"); // unused glyph - beta key
+    if (save_file_get_flags() & SAVE_FLAG_HAVE_KEY_1) { gHudDisplay.keys = 1;}
+    if (save_file_get_flags() & SAVE_FLAG_HAVE_KEY_2) { gHudDisplay.keys = 2;}
+    for (i = 0; i < 2 ; i++) {
+        print_text((i * 16) + GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(HUD_STARS_X), HUD_TOP_Y - 16, "|"); // unused glyph - beta key
+    }
+    for (i = 0; i < 8 ; i++) {
+        print_text((i * 16) + GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(270), HUD_TOP_Y - 256, "0");
     }
 }
 
@@ -540,7 +544,7 @@ void render_hud_camera_status(void) {
 void render_hud(void) {
     s16 hudDisplayFlags = gHudDisplay.flags;
 
-    if (hudDisplayFlags == HUD_DISPLAY_NONE) {
+    if (1 == 1) {
         sPowerMeterHUD.animation = POWER_METER_HIDDEN;
         sPowerMeterStoredHealth = 8;
         sPowerMeterVisibleTimer = 0;
@@ -577,7 +581,7 @@ void render_hud(void) {
         }
 #endif
 
-        if (hudDisplayFlags & HUD_DISPLAY_FLAG_COIN_COUNT) {
+        if (hudDisplayFlags) {
             render_hud_coins();
         }
 
@@ -598,7 +602,7 @@ void render_hud(void) {
 #ifdef PUPPYCAM
             if (!gPuppyCam.enabled) {
 #endif
-            render_hud_camera_status();
+
 #ifdef PUPPYCAM
             }
 #endif

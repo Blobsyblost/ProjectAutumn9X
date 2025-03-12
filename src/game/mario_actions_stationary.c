@@ -135,15 +135,15 @@ s32 act_idle(struct MarioState *m) {
     } else {
         switch (m->actionState) {
             case ACT_STATE_IDLE_HEAD_LEFT:
-                set_mario_animation(m, MARIO_ANIM_IDLE_HEAD_LEFT);
+                set_mario_animation(m, MARIO_ANIM_FIRST_PERSON);
                 break;
 
             case ACT_STATE_IDLE_HEAD_RIGHT:
-                set_mario_animation(m, MARIO_ANIM_IDLE_HEAD_RIGHT);
+                set_mario_animation(m, MARIO_ANIM_FIRST_PERSON);
                 break;
 
             case ACT_STATE_IDLE_HEAD_CENTER:
-                set_mario_animation(m, MARIO_ANIM_IDLE_HEAD_CENTER);
+                set_mario_animation(m, MARIO_ANIM_FIRST_PERSON);
                 break;
         }
 
