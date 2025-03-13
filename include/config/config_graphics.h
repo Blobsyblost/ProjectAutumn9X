@@ -44,7 +44,7 @@
  * When this option is disabled, LODs will work regardless of whether console or emulator is used.
  * Regardless of whether this setting is enabled or not, you can use gEmulator to wrap your own code in a console check.
  */
-#define AUTO_LOD
+//#define AUTO_LOD
 
 /**
  * Enables Puppyprint, a display library for text and large images.
