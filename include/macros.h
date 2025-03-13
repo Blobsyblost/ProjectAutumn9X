@@ -3,6 +3,9 @@
 
 #include "platform_info.h"
 
+#include "HmsToGeo.h"
+
+
 #ifndef __sgi
 #define GLOBAL_ASM(...)
 #endif

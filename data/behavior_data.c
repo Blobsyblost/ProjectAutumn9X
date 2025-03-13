@@ -1932,8 +1932,10 @@ const BehaviorScript bhvGrandStar[] = {
     SET_INT(oInteractionSubtype, INT_SUBTYPE_GRAND_STAR),
     SET_HITBOX(/*Radius*/ 160, /*Height*/ 100),
     SET_HOME(),
+    BILLBOARD(),
     BEGIN_LOOP(),
         CALL_NATIVE(bhv_grand_star_loop),
+        ANIMATE_TEXTURE(oAnimState, 2),
     END_LOOP(),
 };
 
@@ -3489,8 +3491,10 @@ const BehaviorScript bhvUnlockDoorStar[] = {
     BEGIN(OBJ_LIST_LEVEL),
     OR_INT(oFlags, (OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
     CALL_NATIVE(bhv_unlock_door_star_init),
+    BILLBOARD(),
     BEGIN_LOOP(),
         CALL_NATIVE(bhv_unlock_door_star_loop),
+        ANIMATE_TEXTURE(oAnimState, 2),
     END_LOOP(),
 };
 
@@ -3596,8 +3600,10 @@ const BehaviorScript bhvActSelectorStarType[] = {
     BEGIN(OBJ_LIST_DEFAULT),
     OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
     SET_HOME(),
+    BILLBOARD(),
     BEGIN_LOOP(),
         CALL_NATIVE(bhv_act_selector_star_type_loop),
+        ANIMATE_TEXTURE(oAnimState, 2),
     END_LOOP(),
 };
 
@@ -4123,8 +4129,10 @@ const BehaviorScript bhvCelebrationStar[] = {
     BEGIN(OBJ_LIST_LEVEL),
     OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
     CALL_NATIVE(bhv_celebration_star_init),
+    BILLBOARD(),
     BEGIN_LOOP(),
         CALL_NATIVE(bhv_celebration_star_loop),
+        ANIMATE_TEXTURE(oAnimState, 2),
     END_LOOP(),
 };
 
@@ -4539,8 +4547,10 @@ const BehaviorScript bhvStar[] = {
     OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
     CALL_NATIVE(bhv_init_room),
     CALL_NATIVE(bhv_collect_star_init),
+    BILLBOARD(),
     BEGIN_LOOP(),
         CALL_NATIVE(bhv_collect_star_loop),
+        ANIMATE_TEXTURE(oAnimState, 2),
     END_LOOP(),
 };
 
