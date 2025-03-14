@@ -25,8 +25,6 @@ extern const Gfx butterfly_seg3_dl_030054A0[];
 extern const struct Animation *const butterfly_seg3_anims_030056B0[];
 
 // coin
-extern const GeoLayout yellow_coin_geo[];
-extern const GeoLayout yellow_coin_no_shadow_geo[];
 extern const GeoLayout blue_coin_geo[];
 extern const GeoLayout blue_coin_no_shadow_geo[];
 extern const GeoLayout red_coin_geo[];
@@ -297,5 +295,7 @@ extern const Gfx wooden_signpost_seg3_dl_0302DC40[];
 extern const Gfx wooden_signpost_seg3_dl_0302DCD0[];
 extern const Gfx wooden_signpost_seg3_dl_0302DD08[];
 extern const Collision wooden_signpost_seg3_collision_0302DD80[];
+
+#include "ssk_yellow_coin/geo_header.h"
 
 #endif
