@@ -437,9 +437,9 @@ void render_hud_coins(void) {
 void render_hud_stars(void) {
     if (gHudFlash == HUD_FLASH_STARS && gGlobalTimer & 0x8) return;
     s8 showX = TRUE;
-    print_text(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(HUD_STARS_X), HUD_TOP_Y, "S"); // 'Star' glyph
-    if (showX) print_text((GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(HUD_STARS_X) + 16), HUD_TOP_Y, "*"); // 'X' glyph
-    print_text_fmt_int((showX * 14) + GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(HUD_STARS_X - 16),
+    print_text(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(HUD_STARS_X - 32 ), HUD_TOP_Y, "S"); // 'Star' glyph
+    if (showX) print_text((GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(HUD_STARS_X - 32 ) + 16), HUD_TOP_Y, "*"); // 'X' glyph
+    print_text_fmt_int((showX * 14) + GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(HUD_STARS_X - 16 - 28 ),
                        HUD_TOP_Y, "%d", gHudDisplay.stars);
 
                     }
@@ -452,8 +452,18 @@ void render_hud_keys(void) {
     s16 i;
     if (save_file_get_flags() & SAVE_FLAG_HAVE_KEY_1) { gHudDisplay.keys = 1;}
     if (save_file_get_flags() & SAVE_FLAG_HAVE_KEY_2) { gHudDisplay.keys = 2;}
-    for (i = 0; i < 2 ; i++) {
-        print_text((i * 16) + GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(HUD_STARS_X), HUD_TOP_Y - 16, "|"); // unused glyph - beta key
+    
+    if (gCurrLevelNum == 16)
+    {
+        for (i = 0; i < 2 ; i++) {
+            print_text((i * 16) + GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(HUD_STARS_X + 32 ), HUD_TOP_Y - 16, "|"); // unused glyph - beta key
+    }
+} else {
+        for (i = 0; i < 2 ; i++) {
+            print_text((i * 16) + GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(HUD_STARS_X + 32 ), HUD_TOP_Y - 32, "|"); // unused glyph - beta key
+
+    }
+
     }
     for (i = 0; i < 8 ; i++) {
         print_text((i * 16) + GFX_DIMENSIONS_RECT_FROM_LEFT_EDGE(22), HUD_TOP_Y - 16, "0");
@@ -461,9 +471,33 @@ void render_hud_keys(void) {
 }
 
 void render_hud_world(void) {
-    print_text(HUD_COINS_X, HUD_TOP_Y, "WORLD"); // 'Coin' glyph
-    print_text(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(HUD_COINS_X) + 16, HUD_TOP_Y - 16, ("1" "-" "1")); 
-    
+
+if (gCurrLevelNum == 16 || gCurrLevelNum == 6) {
+    render_hud_keys();
+    if (gCurrLevelNum == 16) {
+        print_text(HUD_COINS_X, HUD_TOP_Y, "OUTSIDE");
+        
+    } else {
+        print_text(HUD_COINS_X, HUD_TOP_Y, "CASTLE");
+        print_text_fmt_int((HUD_COINS_X), (HUD_TOP_Y - 16), "FLOOR %d", (gCurrentArea->index));
+    }
+
+
+} 
+else {    print_text(HUD_COINS_X, HUD_TOP_Y, "WORLD"); // 'Coin' glyph
+    print_text_fmt_int((HUD_COINS_X), (HUD_TOP_Y - 16), "%d", (gCurrLevelNum));
+    if (gCurrLevelNum >= 10) {
+
+        print_text(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(HUD_COINS_X) + (16 * 2) + 16, HUD_TOP_Y - 16, ("-")); 
+        print_text_fmt_int((HUD_COINS_X) + (16 * 2) + 16, (HUD_TOP_Y - 16), "%d", (gCurrentArea->index));
+    } 
+    else 
+    {
+        print_text(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(HUD_COINS_X) + (16 * 2), HUD_TOP_Y - 16, ("-")); 
+        print_text_fmt_int((HUD_COINS_X) + (16 * 2), (HUD_TOP_Y - 16), "%d", (gCurrentArea->index));        
+    }
+}
+
 
 }
 
@@ -581,7 +615,7 @@ void render_hud(void) {
 
         if (gCurrentArea != NULL && gCurrentArea->camera->mode == CAMERA_MODE_INSIDE_CANNON) {
             render_hud_cannon_reticle();
-        }
+        }   
 
 #ifdef ENABLE_LIVES
         if (hudDisplayFlags & HUD_DISPLAY_FLAG_LIVES) {
@@ -598,7 +632,7 @@ void render_hud(void) {
         }
 
         if (hudDisplayFlags & HUD_DISPLAY_FLAG_KEYS) {
-            render_hud_keys();
+
             render_hud_world();
         }
 
