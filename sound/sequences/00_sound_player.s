@@ -3081,20 +3081,14 @@ layer_end
 
 .sound_general_coin:
 chan_setbank 9
-chan_setinstr 3
-chan_setenvelope .envelope_3358
-chan_setvibratoextent 3
-chan_setvibratorate 60
-chan_setval 25
-chan_call .set_reverb
+chan_setinstr 7
 chan_setlayer 0, .layer_11E4
-chan_setval 0x45
-chan_call .delay
-chan_setvibratoextent 0xff
 chan_end
 
 .layer_11E4:
+layer_note1 39, 0x64, 97
 layer_transpose 24
+layer_end
 
 .layer_fn_11E6:
 layer_note1 25, 0x2, 40
@@ -7348,7 +7342,7 @@ layer_end
 
 .sound_menu_coin_its_a_me_mario:
 chan_setbank 9
-chan_setinstr 3
+chan_setinstr 7
 chan_setenvelope .envelope_3358
 chan_setvibratoextent 3
 chan_setvibratorate 60
