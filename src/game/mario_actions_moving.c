@@ -1050,7 +1050,7 @@ s32 act_braking(struct MarioState *m) {
 
     play_sound(SOUND_MOVING_TERRAIN_SLIDE + m->terrainSoundAddend, m->marioObj->header.gfx.cameraToObject);
     adjust_sound_for_speed(m);
-    set_mario_animation(m, MARIO_ANIM_SKID_ON_GROUND);
+    set_mario_animation(m, MARIO_ANIM_RUNNING);
     return FALSE;
 }
 
@@ -1446,16 +1446,12 @@ s32 act_crouch_slide(struct MarioState *m) {
 
     if (m->actionTimer < 30) {
         m->actionTimer++;
-        if (m->input & INPUT_A_PRESSED) {
-            if (m->forwardVel > 10.0f) {
-                return set_jumping_action(m, ACT_LONG_JUMP, 0);
-            }
-        }
+
     }
 
     if (m->input & INPUT_B_PRESSED) {
         if (m->forwardVel >= 10.0f) {
-            return set_mario_action(m, ACT_SLIDE_KICK, 0);
+            return set_mario_action(m, ACT_MOVE_PUNCHING, 0x9);
         } else {
             return set_mario_action(m, ACT_MOVE_PUNCHING, 0x9);
         }
@@ -1719,7 +1715,7 @@ u32 common_landing_action(struct MarioState *m, s16 animation, u32 airAction) {
         m->particleFlags |= PARTICLE_DUST;
     }
 
-    set_mario_animation(m, animation);
+
     play_mario_landing_sound_once(m, SOUND_ACTION_TERRAIN_LANDING);
 
     if (m->floor->type >= SURFACE_SHALLOW_QUICKSAND && m->floor->type <= SURFACE_MOVING_QUICKSAND) {

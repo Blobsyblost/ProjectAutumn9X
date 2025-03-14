@@ -73,7 +73,7 @@ void breakable_box_small_released_loop(void) {
 void breakable_box_small_idle_loop(void) {
     switch (o->oAction) {
         case BREAKABLE_BOX_SMALL_ACT_MOVE:
-            small_breakable_box_act_move();
+
             break;
 
         case OBJ_ACT_LAVA_DEATH:
@@ -127,7 +127,7 @@ void bhv_breakable_box_small_loop(void) {
             break;
 
         case HELD_THROWN:
-            breakable_box_small_get_thrown();
+            breakable_box_small_get_dropped();
             break;
 
         case HELD_DROPPED:

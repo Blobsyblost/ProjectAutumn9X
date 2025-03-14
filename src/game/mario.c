@@ -1617,6 +1617,9 @@ u32 update_and_return_cap_flags(struct MarioState *m) {
  * Updates the Mario's cap, rendering, and hitbox.
  */
 void mario_update_hitbox_and_cap_model(struct MarioState *m) {
+
+    
+
     struct MarioBodyState *bodyState = m->marioBodyState;
     s32 flags = update_and_return_cap_flags(m);
 

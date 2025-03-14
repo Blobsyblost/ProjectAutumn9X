@@ -425,9 +425,9 @@ void render_debug_mode(void) {
  * Renders the amount of coins collected.
  */
 void render_hud_coins(void) {
-    print_text(HUD_COINS_X, HUD_TOP_Y, "C"); // 'Coin' glyph
-    print_text((HUD_COINS_X + 16), HUD_TOP_Y, "*"); // 'X' glyph
-    print_text_fmt_int((HUD_COINS_X + 30), HUD_TOP_Y, "%d", gHudDisplay.coins);
+    print_text(HUD_COINS_X - 70, HUD_TOP_Y, "C"); // 'Coin' glyph
+    print_text((HUD_COINS_X - 70 + 16), HUD_TOP_Y, "*"); // 'X' glyph
+    print_text_fmt_int((HUD_COINS_X - 70 + 30), HUD_TOP_Y, "%d", gHudDisplay.coins);
 }
 
 /**
@@ -441,7 +441,8 @@ void render_hud_stars(void) {
     if (showX) print_text((GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(HUD_STARS_X) + 16), HUD_TOP_Y, "*"); // 'X' glyph
     print_text_fmt_int((showX * 14) + GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(HUD_STARS_X - 16),
                        HUD_TOP_Y, "%d", gHudDisplay.stars);
-}
+
+                    }
 
 /**
  * Unused function that renders the amount of keys collected.
@@ -455,8 +456,15 @@ void render_hud_keys(void) {
         print_text((i * 16) + GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(HUD_STARS_X), HUD_TOP_Y - 16, "|"); // unused glyph - beta key
     }
     for (i = 0; i < 8 ; i++) {
-        print_text((i * 16) + GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(270), HUD_TOP_Y - 256, "0");
+        print_text((i * 16) + GFX_DIMENSIONS_RECT_FROM_LEFT_EDGE(22), HUD_TOP_Y - 16, "0");
     }
+}
+
+void render_hud_world(void) {
+    print_text(HUD_COINS_X, HUD_TOP_Y, "WORLD"); // 'Coin' glyph
+    print_text(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(HUD_COINS_X) + 16, HUD_TOP_Y - 16, ("1" "-" "1")); 
+    
+
 }
 
 /**
@@ -591,6 +599,7 @@ void render_hud(void) {
 
         if (hudDisplayFlags & HUD_DISPLAY_FLAG_KEYS) {
             render_hud_keys();
+            render_hud_world();
         }
 
 #ifdef BREATH_METER
