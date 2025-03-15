@@ -6,6 +6,7 @@
 #include "behavior_actions.h"
 #include "behavior_data.h"
 #include "camera.h"
+
 #include "course_table.h"
 #include "dialog_ids.h"
 #include "engine/math_util.h"
@@ -27,6 +28,7 @@
 
 u8  sDelayInvincTimer;
 s16 sInvulnerable;
+
 u32 interact_coin          (struct MarioState *m, u32 interactType, struct Object *obj);
 u32 interact_water_ring    (struct MarioState *m, u32 interactType, struct Object *obj);
 u32 interact_star_or_key   (struct MarioState *m, u32 interactType, struct Object *obj);
@@ -731,7 +733,7 @@ void reset_mario_pitch(struct MarioState *m) {
 
 u32 interact_coin(struct MarioState *m, UNUSED u32 interactType, struct Object *obj) {
     m->numCoins += obj->oDamageOrCoinValue;
-    m->healCounter += 4 * obj->oDamageOrCoinValue;
+        m->healCounter += 4 * obj->oDamageOrCoinValue;
 #ifdef BREATH_METER
     m->breathCounter += (4 * obj->oDamageOrCoinValue);
 #endif

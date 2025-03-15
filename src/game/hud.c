@@ -465,12 +465,12 @@ void render_hud_keys(void) {
     }
 
     }
-    for (i = 0; i < 8 ; i++) {
-        print_text((i * 16) + GFX_DIMENSIONS_RECT_FROM_LEFT_EDGE(22), HUD_TOP_Y - 16, "0");
-    }
+
+
 }
 
 void render_hud_world(void) {
+print_text_fmt_int(GFX_DIMENSIONS_RECT_FROM_LEFT_EDGE(22), (HUD_TOP_Y -16), "%d", (0));
 
 if (gCurrLevelNum == 16 || gCurrLevelNum == 6) {
     render_hud_keys();

@@ -10,7 +10,7 @@ const GeoLayout castle_grounds_area_1_geo[] = {
 		GEO_DISPLAY_LIST(LAYER_OPAQUE, castle_grounds_dl_Main_Geo_001_mesh_layer_1),
 		GEO_TRANSLATE_NODE_WITH_DL(LAYER_OPAQUE, 838, 892, 7184, castle_grounds_dl_Main_Geo_002_mesh_layer_1),
 		GEO_DISPLAY_LIST(LAYER_OPAQUE, castle_grounds_dl_Main_Geo_003_mesh_layer_1),
-		GEO_BILLBOARD_WITH_PARAMS(LAYER_OPAQUE, -3210, 7408, -89),
+		GEO_BILLBOARD_WITH_PARAMS(LAYER_OPAQUE, -3210, 7408, 0),
 		GEO_OPEN_NODE(),
 			GEO_ROTATION_NODE(LAYER_OPAQUE, 0, 0, -90),
 			GEO_OPEN_NODE(),

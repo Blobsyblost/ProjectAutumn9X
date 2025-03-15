@@ -141,3 +141,4 @@ void mario_process_interactions(struct MarioState *m);
 void mario_handle_special_floors(struct MarioState *m);
 
 #endif // INTERACTION_H
+
