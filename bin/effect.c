@@ -10,6 +10,11 @@ UNUSED static const u64 effect_unused_0 = 0;
 
 // Flower (Unused)
 // 0x0B000008
+
+ALIGNED8 static const Texture effect_0B020008[] = {
+#include "textures/effect/flower.Tall.rgba16.inc.c"
+};
+
 ALIGNED8 static const Texture effect_0B000008[] = {
 #include "textures/effect/flower.00008.rgba16.inc.c"
 };
