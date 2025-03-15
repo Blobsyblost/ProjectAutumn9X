@@ -43,6 +43,8 @@ const LevelScript level_bob_entry[] = {
 	/* Fast64 end persistent block [level commands] */
 
 	AREA(1, bob_area_1),
+		WARP_NODE(0xF1, LEVEL_CASTLE, 0x01, 51, WARP_NO_CHECKPOINT),
+		WARP_NODE(0xF0, LEVEL_CASTLE, 0x01, 50, WARP_NO_CHECKPOINT),
 		OBJECT(MODEL_EXCLAMATION_BOX, 203, 1904, 1602, 0, 90, 0, (0x6 << 24) | (0x6 << 16) | (0x6 << 8) | (0x6), bhvExclamationBox),
 		OBJECT(MODEL_EXCLAMATION_BOX, 667, -184, -2864, 0, 90, 0, (0x6 << 24) | (0x6 << 16) | (0x6 << 8) | (0x6), bhvExclamationBox),
 		OBJECT(MODEL_NONE, -44, -436, -1523, 0, 90, 0, 0x00000000, bhvCoinFormation),

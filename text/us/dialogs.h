@@ -164,14 +164,14 @@ Ready?\n\
 \n\
 //Go//// Don't Go"))
 
-DEFINE_DIALOG(DIALOG_010, 1, 4, 30, 200, _("\
-You've stepped on the\n\
-Wing Cap Switch. Wearing\n\
-the Wing Cap, you can\n\
-soar through the sky.\n\
-Now Wing Caps will pop\n\
-out of all the red blocks\n\
-you find.\n\
+DEFINE_DIALOG(DIALOG_010, 1, 4, 20, 200, _("\
+Power star!\n\
+The castle feels much\n\
+more alive...\n\
+\n\
+\n\
+\n\
+\n\
 \n\
 Would you like to Save?\n\
 \n\
