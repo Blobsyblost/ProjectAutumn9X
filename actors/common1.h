@@ -298,4 +298,6 @@ extern const Collision wooden_signpost_seg3_collision_0302DD80[];
 
 #include "ssk_yellow_coin/geo_header.h"
 
+#include "red_star/geo_header.h"
+
 #endif

@@ -89,3 +89,4 @@ UNUSED static const u64 binid_21 = 21;
 UNUSED static const u64 binid_22 = 22;
 
 #include "ssk_yellow_coin/model.inc.c"
+#include "red_star/model.inc.c"

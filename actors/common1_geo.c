@@ -27,3 +27,4 @@
 #include "tree/geo.inc.c"
 
 #include "ssk_yellow_coin/geo.inc.c"
+#include "red_star/geo.inc.c"

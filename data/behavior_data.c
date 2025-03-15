@@ -914,8 +914,10 @@ const BehaviorScript bhvSpawnedStarNoLevelExit[] = {
     OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
     // Spawned star - common:
     SET_HOME(),
+    BILLBOARD(),
     CALL_NATIVE(bhv_spawned_star_init),
     BEGIN_LOOP(),
+        ANIMATE_TEXTURE(oAnimState, 2),    
         CALL_NATIVE(bhv_spawned_star_loop),
     END_LOOP(),
 };
@@ -4559,8 +4561,10 @@ const BehaviorScript bhvStarSpawnCoordinates[] = {
     OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
     CALL_NATIVE(bhv_collect_star_init),
     CALL_NATIVE(bhv_star_spawn_init),
+    BILLBOARD(),
     BEGIN_LOOP(),
         CALL_NATIVE(bhv_star_spawn_loop),
+        ANIMATE_TEXTURE(oAnimState, 2),
     END_LOOP(),
 };
 
@@ -4568,8 +4572,10 @@ const BehaviorScript bhvHiddenRedCoinStar[] = {
     BEGIN(OBJ_LIST_LEVEL),
     OR_INT(oFlags, (OBJ_FLAG_PERSISTENT_RESPAWN | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
     CALL_NATIVE(bhv_hidden_red_coin_star_init),
+    BILLBOARD(),
     BEGIN_LOOP(),
         CALL_NATIVE(bhv_hidden_red_coin_star_loop),
+        
     END_LOOP(),
 };
 
@@ -4591,8 +4597,10 @@ const BehaviorScript bhvBowserCourseRedCoinStar[] = {
     BEGIN(OBJ_LIST_LEVEL),
     OR_INT(oFlags, (OBJ_FLAG_PERSISTENT_RESPAWN | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
     CALL_NATIVE(bhv_bowser_course_red_coin_star_init),
+    BILLBOARD(),
     BEGIN_LOOP(),
         CALL_NATIVE(bhv_bowser_course_red_coin_star_loop),
+        ANIMATE_TEXTURE(oAnimState, 2),
     END_LOOP(),
 };
 
@@ -4600,8 +4608,10 @@ const BehaviorScript bhvHiddenStar[] = {
     BEGIN(OBJ_LIST_LEVEL),
     OR_INT(oFlags, (OBJ_FLAG_PERSISTENT_RESPAWN | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
     CALL_NATIVE(bhv_hidden_star_init),
+    BILLBOARD(),
     BEGIN_LOOP(),
         CALL_NATIVE(bhv_hidden_star_loop),
+        ANIMATE_TEXTURE(oAnimState, 2),
     END_LOOP(),
 };
 
@@ -4610,7 +4620,9 @@ const BehaviorScript bhvHiddenStarTrigger[] = {
     OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
     SET_HITBOX(/*Radius*/ 100, /*Height*/ 100),
     SET_INT(oIntangibleTimer, 0),
+    BILLBOARD(),
     BEGIN_LOOP(),
+        ANIMATE_TEXTURE(oAnimState, 2),
         CALL_NATIVE(bhv_hidden_star_trigger_loop),
     END_LOOP(),
 };
