@@ -30,6 +30,8 @@ void bobomb_spawn_coin(void) {
 void bobomb_act_explode(void) {
     if (o->oTimer < 5) {
         cur_obj_scale(1.0f + ((f32) o->oTimer / 5.0f));
+
+    
     } else {
         struct Object *explosion = spawn_object(o, MODEL_EXPLOSION, bhvExplosion);
         explosion->oGraphYOffset += 100.0f;
@@ -39,9 +41,18 @@ void bobomb_act_explode(void) {
 
         o->activeFlags = ACTIVE_FLAG_DEACTIVATED;
     }
+
 }
 
 void bobomb_check_interactions(void) {
+    if (o->oTimer < 30 || o->oAction == BOBOMB_ACT_EXPLODE) {
+        if (o->header.gfx.sharedChild == gLoadedGraphNodes[MODEL_BOBOMB_BUDDY]) 
+        {
+        o->header.gfx.sharedChild = gLoadedGraphNodes[MODEL_BLACK_BOBOMB];
+        } else {
+            o->header.gfx.sharedChild = gLoadedGraphNodes[MODEL_BOBOMB_BUDDY];
+    
+            }    }
     obj_set_hitbox(o, &sBobombHitbox);
 
     if (o->oInteractStatus & INT_STATUS_INTERACTED) {

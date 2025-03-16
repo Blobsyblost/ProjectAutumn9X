@@ -25,6 +25,8 @@ const GeoLayout bob_area_2_geo[] = {
 		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_ALPHA, 1283, -3983, 1803, -90, 0, 0, bob_dl_Plane_005_mesh_layer_4),
 		GEO_TRANSLATE_NODE_WITH_DL(LAYER_OPAQUE, 1619, 0, 0, bob_dl_Xhomp_s_mesh_layer_1),
 		GEO_TRANSLATE_NODE_WITH_DL(LAYER_TRANSPARENT, 1619, 0, 0, bob_dl_Xhomp_s_001_mesh_layer_5),
+		GEO_TRANSLATE_NODE_WITH_DL(LAYER_OPAQUE, 1242, 0, 0, bob_dl_Xhomp_s_002_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(LAYER_TRANSPARENT, 1619, 0, 0, bob_dl_Xhomp_s_003_mesh_layer_5),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };

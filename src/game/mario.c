@@ -235,26 +235,15 @@ s16 return_mario_anim_y_translation(struct MarioState *m) {
  * Plays a sound if if Mario doesn't have the flag being checked.
  */
 void play_sound_if_no_flag(struct MarioState *m, u32 soundBits, u32 flags) {
-    if (!(m->flags & flags)) {
-        play_sound(soundBits, m->marioObj->header.gfx.cameraToObject);
-        m->flags |= flags;
-    }
+
 }
 
 /**
  * Plays a jump sound if one has not been played since the last action change.
  */
 void play_mario_jump_sound(struct MarioState *m) {
-    if (!(m->flags & MARIO_MARIO_SOUND_PLAYED)) {
-        if (m->action == ACT_TRIPLE_JUMP) {
-            play_sound(SOUND_MARIO_YAHOO_WAHA_YIPPEE + ((gAudioRandom % 5) << 16),
-                       m->marioObj->header.gfx.cameraToObject);
-        } else {
-            play_sound(SOUND_MARIO_YAH_WAH_HOO + ((gAudioRandom % 3) << 16),
-                       m->marioObj->header.gfx.cameraToObject);
-        }
-        m->flags |= MARIO_MARIO_SOUND_PLAYED;
-    }
+
+
 }
 
 /**

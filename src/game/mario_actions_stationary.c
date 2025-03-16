@@ -103,7 +103,9 @@ s32 check_common_hold_idle_cancels(struct MarioState *m) {
 }
 
 //! TODO: actionArg names
-s32 act_idle(struct MarioState *m) {
+s32 act_idle(struct MarioState *m) 
+{
+
     if (m->quicksandDepth > 30.0f) {
         return set_mario_action(m, ACT_IN_QUICKSAND, 0);
     }
@@ -114,6 +116,7 @@ s32 act_idle(struct MarioState *m) {
 
     if (!(m->actionArg & 1) && m->health < 0x300) {
         return set_mario_action(m, ACT_PANTING, 0);
+
     }
 
     if (check_common_idle_cancels(m)) {
@@ -178,6 +181,10 @@ s32 act_idle(struct MarioState *m) {
     stationary_ground_step(m);
 
     return FALSE;
+
+    vec3f_set(m->marioObj->header.gfx.scale, 1.0f - 100, 100,
+        1.0f - 100);
+
 }
 
 void play_anim_sound(struct MarioState *m, u32 actionState, s32 animFrame, u32 sound) {

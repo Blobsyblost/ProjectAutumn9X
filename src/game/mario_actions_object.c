@@ -127,7 +127,6 @@ s32 mario_update_punch_sequence(struct MarioState *m) {
             break;
 
         case ACT_ARG_PUNCH_SEQUENCE_BREAKDANCE:
-            play_mario_action_sound(m, SOUND_MARIO_PUNCH_HOO, 1);
             set_mario_animation(m, MARIO_ANIM_BREAKDANCE);
             animFrame = m->marioObj->header.gfx.animInfo.animFrame;
 

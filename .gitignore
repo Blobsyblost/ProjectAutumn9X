@@ -63,12 +63,7 @@ actors/amp/amp_mouth.rgba16.png
 actors/blue_coin_switch/blue_coin_switch_side.rgba16.png
 actors/blue_coin_switch/blue_coin_switch_top.rgba16.png
 actors/blue_fish/blue_fish.rgba16.png
-actors/bobomb/bob-omb_buddy_left_side.rgba16.png
-actors/bobomb/bob-omb_buddy_right_side.rgba16.png
-actors/bobomb/bob-omb_eyes.rgba16.png
-actors/bobomb/bob-omb_eyes_blink.rgba16.png
-actors/bobomb/bob-omb_left_side.rgba16.png
-actors/bobomb/bob-omb_right_side.rgba16.png
+
 actors/bomb/bomb_left_side.rgba16.png
 actors/bomb/bomb_right_side.rgba16.png
 actors/bomb/bomb_spike.rgba16.png
@@ -160,8 +155,7 @@ actors/chair/chair_bottom.rgba16.png
 actors/chair/chair_front.rgba16.png
 actors/chair/chair_leg.rgba16.png
 actors/chair/chair_surface_unused.rgba16.png
-actors/checkerboard_platform/checkerboard_platform.rgba16.png
-actors/checkerboard_platform/checkerboard_platform_side.rgba16.png
+
 actors/chillychief/chill_bully_eye.rgba16.png
 actors/chillychief/chill_bully_left_side.rgba16.png
 actors/chillychief/chill_bully_right_side.rgba16.png
@@ -171,10 +165,7 @@ actors/chuckya/chuckya_eyes.rgba16.png
 actors/chuckya/chuckya_hand_antenna.rgba16.png
 actors/clam_shell/clam_shell.rgba16.png
 actors/clam_shell/clam_shell_mouth.rgba16.png
-actors/coin/coin_front.ia16.png
-actors/coin/coin_side.ia16.png
-actors/coin/coin_tilt_left.ia16.png
-actors/coin/coin_tilt_right.ia16.png
+
 actors/cyan_fish/cyan_fish.rgba16.png
 actors/dirt/dirt_particle.rgba16.png
 
@@ -206,9 +197,7 @@ actors/flyguy/flyguy_cloth_wrinkle.rgba16.png
 actors/flyguy/flyguy_face.rgba16.png
 actors/flyguy/flyguy_propeller.ia16.png
 actors/fwoosh/fwoosh_face.ia16.png
-actors/goomba/goomba_body.rgba16.png
-actors/goomba/goomba_face.rgba16.png
-actors/goomba/goomba_face_blink.rgba16.png
+
 actors/haunted_cage/bbh_cage_bars.rgba16.png
 actors/haunted_cage/bbh_cage_double_ornament.rgba16.png
 actors/haunted_cage/bbh_cage_floor.rgba16.png
@@ -231,17 +220,7 @@ actors/impact_smoke/impact_smoke_0.ia16.png
 actors/impact_smoke/impact_smoke_1.ia16.png
 actors/impact_smoke/impact_smoke_2.ia16.png
 actors/impact_smoke/impact_smoke_3.ia16.png
-actors/king_bobomb/bob-omb_buddy_body_unused.rgba16.png
-actors/king_bobomb/bob-omb_buddy_left_side_unused.rgba16.png
-actors/king_bobomb/bob-omb_buddy_right_side_unused.rgba16.png
-actors/king_bobomb/king_bob-omb_arm.rgba16.png
-actors/king_bobomb/king_bob-omb_body_unused.rgba16.png
-actors/king_bobomb/king_bob-omb_crown_rim.rgba16.png
-actors/king_bobomb/king_bob-omb_eyes.rgba16.png
-actors/king_bobomb/king_bob-omb_eyes_blink.rgba16.png
-actors/king_bobomb/king_bob-omb_hand.rgba16.png
-actors/king_bobomb/king_bob-omb_left_side.rgba16.png
-actors/king_bobomb/king_bob-omb_right_side.rgba16.png
+
 actors/klepto/klepto_beak.rgba16.png
 actors/klepto/klepto_chest_tuft.rgba16.png
 actors/klepto/klepto_eye.rgba16.png

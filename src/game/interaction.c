@@ -714,7 +714,6 @@ u32 take_damage_and_knock_back(struct MarioState *m, struct Object *obj) {
         }
 
         if (obj->oDamageOrCoinValue > 0) {
-            play_sound(SOUND_MARIO_ATTACKED, m->marioObj->header.gfx.cameraToObject);
         }
 
         update_mario_sound_and_camera(m);
@@ -1098,7 +1097,6 @@ u32 interact_tornado(struct MarioState *m, UNUSED u32 interactType, struct Objec
         marioObj->oMarioTornadoYawVel = 0x400;
         marioObj->oMarioTornadoPosY = m->pos[1] - obj->oPosY;
 
-        play_sound(SOUND_MARIO_WAAAOOOW, m->marioObj->header.gfx.cameraToObject);
 #if ENABLE_RUMBLE
         queue_rumble_data(30, 60);
 #endif
@@ -1121,7 +1119,6 @@ u32 interact_whirlpool(struct MarioState *m, UNUSED u32 interactType, struct Obj
 
         marioObj->oMarioWhirlpoolPosY = m->pos[1] - obj->oPosY;
 
-        play_sound(SOUND_MARIO_WAAAOOOW, m->marioObj->header.gfx.cameraToObject);
 #if ENABLE_RUMBLE
         queue_rumble_data(30, 60);
 #endif
@@ -1143,7 +1140,6 @@ u32 interact_strong_wind(struct MarioState *m, UNUSED u32 interactType, struct O
         m->forwardVel = -24.0f;
         m->vel[1] = 12.0f;
 
-        play_sound(SOUND_MARIO_WAAAOOOW, m->marioObj->header.gfx.cameraToObject);
         update_mario_sound_and_camera(m);
         return set_mario_action(m, ACT_GETTING_BLOWN, 0);
     }
@@ -1251,7 +1247,6 @@ u32 interact_bully(struct MarioState *m, UNUSED u32 interactType, struct Object 
         m->invincTimer = 2;
 
         update_mario_sound_and_camera(m);
-        play_sound(SOUND_MARIO_EEUH, m->marioObj->header.gfx.cameraToObject);
         play_sound(SOUND_OBJ_BULLY_METAL, m->marioObj->header.gfx.cameraToObject);
 
         push_mario_out_of_object(m, obj, 5.0f);
@@ -1481,7 +1476,6 @@ u32 check_object_grab_mario(struct MarioState *m, UNUSED u32 interactType, struc
             m->usedObj      = obj;
 
             update_mario_sound_and_camera(m);
-            play_sound(SOUND_MARIO_OOOF, m->marioObj->header.gfx.cameraToObject);
 #if ENABLE_RUMBLE
             queue_rumble_data(5, 80);
 #endif
