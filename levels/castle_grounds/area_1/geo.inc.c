@@ -25,7 +25,6 @@ const GeoLayout castle_grounds_area_1_geo[] = {
 		GEO_BILLBOARD_WITH_PARAMS_AND_DL(LAYER_ALPHA, 1162, 874, 6690, castle_grounds_dl_Flowa_017_mesh_layer_4),
 		GEO_BILLBOARD_WITH_PARAMS_AND_DL(LAYER_ALPHA, -2008, 170, 4548, castle_grounds_dl_Flowa_018_mesh_layer_4),
 		GEO_BILLBOARD_WITH_PARAMS_AND_DL(LAYER_ALPHA, -1475, 142, 5471, castle_grounds_dl_Flowa_019_mesh_layer_4),
-		GEO_BILLBOARD_WITH_PARAMS_AND_DL(LAYER_ALPHA, -595, 184, 4352, castle_grounds_dl_Flowa_020_mesh_layer_4),
 		GEO_BILLBOARD_WITH_PARAMS_AND_DL(LAYER_ALPHA, 417, 149, 4241, castle_grounds_dl_Flowa_021_mesh_layer_4),
 		GEO_BILLBOARD_WITH_PARAMS_AND_DL(LAYER_ALPHA, 275, -9, -1520, castle_grounds_dl_Flowa_022_mesh_layer_4),
 		GEO_BILLBOARD_WITH_PARAMS_AND_DL(LAYER_ALPHA, 1596, 91, 1488, castle_grounds_dl_Flowa_023_mesh_layer_4),

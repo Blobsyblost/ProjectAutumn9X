@@ -63,6 +63,7 @@ const LevelScript level_castle_grounds_entry[] = {
 		OBJECT(MODEL_CASTLE_GROUNDS_BUBBLY_TREE, -1653, 102, 5727, 0, 0, 0, (10 << 16), bhvTree),
 		OBJECT(MODEL_CASTLE_GROUNDS_BUBBLY_TREE, 1323, 6, 1331, 0, 0, 0, (10 << 16), bhvTree),
 		OBJECT(MODEL_CASTLE_GROUNDS_BUBBLY_TREE, -1051, 14, 1271, 0, 0, 0, (10 << 16), bhvTree),
+		OBJECT(MODEL_NONE, -18, 102, 2829, 0, 0, 0, 0x00000000, bhvCoinFormation),
 		OBJECT(MODEL_CASTLE_CASTLE_DOOR, -1321, -41, -15, 0, -90, 0, (64 << 24) | (64 << 16) | (64 << 8) | (64), bhvDoorWarp),
 		OBJECT(MODEL_CASTLE_CASTLE_DOOR, -1485, 702, 4454, 0, -180, 0, (2 << 24) | (2 << 16) | (2 << 8) | (2), bhvDoorWarp),
 		OBJECT(MODEL_CASTLE_CASTLE_DOOR, 1637, 1356, 6119, 0, -125, 0, (3 << 24) | (3 << 16) | (3 << 8) | (3), bhvDoorWarp),

@@ -1427,8 +1427,8 @@ struct Painting jrb_painting = {
     /* Texture Type */ PAINTING_IMAGE,
     /* Floor Status */ 0x00, 0x00, 0x00 /* which of the painting's nearby special floors Mario's on */,
     /* Ripple Status */ 0x00,
-    /* Rotation */     0.0f,   270.0f,
-    /* Position */  4300.8f,   409.6f,  -537.6f,
+    /* Rotation */     0.0f,   0.0f,
+    /* Position */  -2015.05f, 498.98f, -5856.27f,
     /*                         curr   passive     entry */
     /* Ripple Magnitude */     0.0f,    20.0f,    80.0f,
     /* Ripple Decay */         1.0f,  0.9608f,  0.9524f,
@@ -1536,7 +1536,7 @@ struct Painting ddd_painting = {
     /* Floor Status */ 0x00, 0x00, 0x00 /* which of the painting's nearby special floors Mario's on */,
     /* Ripple Status */ 0x00,
     /* Rotation */    0.0f, 270.0f,
-    /* Position */ 3456.0f, -1075.2f, 1587.2f,
+    /* Position */ -2015.05f, 498.98f, 5856.27f,
     /*                         curr   passive     entry */
     /* Ripple Magnitude */     0.0f,    10.0f,    30.0f,
     /* Ripple Decay */         1.0f,     1.0f,    0.98f,

@@ -1,7 +1,7 @@
 // bobomb.inc.c
 
 static struct ObjectHitbox sBobombHitbox = {
-    /* interactType:      */ INTERACT_GRABBABLE,
+    /* interactType:      */ INTERACT_BOUNCE_TOP,
     /* downOffset:        */ 0,
     /* damageOrCoinValue: */ 0,
     /* health:            */ 0,
@@ -28,6 +28,7 @@ void bobomb_spawn_coin(void) {
 }
 
 void bobomb_act_explode(void) {
+        cur_obj_init_animation(BOBOMB_ANIM_HELD);
     if (o->oTimer < 5) {
         cur_obj_scale(1.0f + ((f32) o->oTimer / 5.0f));
 

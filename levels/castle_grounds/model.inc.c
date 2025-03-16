@@ -5584,30 +5584,6 @@ Gfx castle_grounds_dl_Flowa_019_mesh_layer_4_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx castle_grounds_dl_Flowa_020_mesh_layer_4_vtx_cull[8] = {
-	{{ {-50, -44, 0}, 0, {0, 0}, {0, 0, 0, 0} }},
-	{{ {-50, 44, 0}, 0, {0, 0}, {0, 0, 0, 0} }},
-	{{ {-50, 44, 0}, 0, {0, 0}, {0, 0, 0, 0} }},
-	{{ {-50, -44, 0}, 0, {0, 0}, {0, 0, 0, 0} }},
-	{{ {50, -44, 0}, 0, {0, 0}, {0, 0, 0, 0} }},
-	{{ {50, 44, 0}, 0, {0, 0}, {0, 0, 0, 0} }},
-	{{ {50, 44, 0}, 0, {0, 0}, {0, 0, 0, 0} }},
-	{{ {50, -44, 0}, 0, {0, 0}, {0, 0, 0, 0} }},
-};
-
-Vtx castle_grounds_dl_Flowa_020_mesh_layer_4_vtx_0[4] = {
-	{{ {50, -44, 0}, 0, {496, 1006}, {0, 0, 127, 255} }},
-	{{ {50, 44, 0}, 0, {496, 106}, {0, 0, 127, 255} }},
-	{{ {-50, 44, 0}, 0, {496, 106}, {0, 0, 127, 255} }},
-	{{ {-50, -44, 0}, 0, {496, 1006}, {0, 0, 127, 255} }},
-};
-
-Gfx castle_grounds_dl_Flowa_020_mesh_layer_4_tri_0[] = {
-	gsSPVertex(castle_grounds_dl_Flowa_020_mesh_layer_4_vtx_0 + 0, 4, 0),
-	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
-	gsSPEndDisplayList(),
-};
-
 Vtx castle_grounds_dl_Flowa_021_mesh_layer_4_vtx_cull[8] = {
 	{{ {-50, -44, 0}, 0, {0, 0}, {0, 0, 0, 0} }},
 	{{ {-50, 44, 0}, 0, {0, 0}, {0, 0, 0, 0} }},
@@ -9975,17 +9951,6 @@ Gfx castle_grounds_dl_Flowa_019_mesh_layer_4[] = {
 	gsSPCullDisplayList(0, 7),
 	gsSPDisplayList(mat_castle_grounds_dl_f3dlite_material_011),
 	gsSPDisplayList(castle_grounds_dl_Flowa_019_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_castle_grounds_dl_f3dlite_material_011),
-	gsSPEndDisplayList(),
-};
-
-Gfx castle_grounds_dl_Flowa_020_mesh_layer_4[] = {
-	gsSPClearGeometryMode(G_LIGHTING),
-	gsSPVertex(castle_grounds_dl_Flowa_020_mesh_layer_4_vtx_cull + 0, 8, 0),
-	gsSPSetGeometryMode(G_LIGHTING),
-	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_castle_grounds_dl_f3dlite_material_011),
-	gsSPDisplayList(castle_grounds_dl_Flowa_020_mesh_layer_4_tri_0),
 	gsSPDisplayList(mat_revert_castle_grounds_dl_f3dlite_material_011),
 	gsSPEndDisplayList(),
 };

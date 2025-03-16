@@ -59,6 +59,7 @@ const LevelScript level_castle_inside_entry[] = {
 		WARP_NODE(0xF0, LEVEL_CASTLE, 0x01, 201, WARP_NO_CHECKPOINT),
 		WARP_NODE(205, LEVEL_CASTLE_GROUNDS, 0x01, 2, WARP_NO_CHECKPOINT),
 		WARP_NODE(69, LEVEL_BOB, 2, 0x0A, WARP_NO_CHECKPOINT),
+		PAINTING_WARP_NODE(9, LEVEL_DDD, 1, 0x0A, WARP_NO_CHECKPOINT),
 		OBJECT(MODEL_NONE, -1711, 330, -4670, 0, 0, 0, (2 << 16), bhvCoinFormation),
 		OBJECT(MODEL_NONE, -1711, 146, 0, 0, 90, 0, (201 << 16), bhvAirborneStarCollectWarp),
 		OBJECT(MODEL_CASTLE_CASTLE_DOOR, 1627, -115, -20, 0, -90, 0, (15 << 24) | (15 << 16) | (15 << 8) | (15), bhvDoorWarp),
