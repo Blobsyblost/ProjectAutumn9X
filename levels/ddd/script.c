@@ -43,8 +43,8 @@ const LevelScript level_ddd_entry[] = {
 
 	AREA(1, ddd_area_1),
 		WARP_NODE(0x0A, LEVEL_BOB, 0x01, 0x0A, WARP_NO_CHECKPOINT),
-		WARP_NODE(0xF0, LEVEL_BOB, 0x01, 0x0A, WARP_NO_CHECKPOINT),
-		WARP_NODE(0xF1, LEVEL_BOB, 0x01, 0x0A, WARP_NO_CHECKPOINT),
+		WARP_NODE(0xF0, LEVEL_CASTLE, 0x01, 54, WARP_NO_CHECKPOINT),
+		WARP_NODE(0xF1, LEVEL_CASTLE, 0x01, 53, WARP_NO_CHECKPOINT),
 		MARIO_POS(0x01, -180, -163, 140, 11500),
 		OBJECT(MODEL_NONE, -163, 140, 11500, 0, -180, 0, 0x000A0000, bhvSpinAirborneWarp),
 		OBJECT(MODEL_WF_GIANT_POLE, -150, -1407, -3525, 0, 0, 0, (161 << 16), bhvPoleGrabbing),
@@ -100,7 +100,7 @@ const LevelScript level_ddd_entry[] = {
 		OBJECT(MODEL_NONE, -2661, -2575, -5305, 0, 90, 0, 0x00000000, bhvHiddenStar),
 		TERRAIN(ddd_area_1_collision),
 		MACRO_OBJECTS(ddd_area_1_macro_objs),
-		SET_BACKGROUND_MUSIC(0x00, SEQ_EVENT_HIGH_SCORE),
+		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_WATER),
 		TERRAIN_TYPE(TERRAIN_WATER),
 		/* Fast64 begin persistent block [area commands] */
 		/* Fast64 end persistent block [area commands] */

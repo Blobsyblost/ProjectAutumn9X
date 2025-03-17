@@ -4714,13 +4714,13 @@ Gfx bob_dl_Flowa_007_mesh_layer_4_tri_0[] = {
 
 Vtx bob_dl_Flowa_008_mesh_layer_4_vtx_cull[8] = {
 	{{ {-24, -15, 0}, 0, {0, 0}, {0, 0, 0, 0} }},
+	{{ {-24, 15, 0}, 0, {0, 0}, {0, 0, 0, 0} }},
+	{{ {-24, 15, 0}, 0, {0, 0}, {0, 0, 0, 0} }},
 	{{ {-24, -15, 0}, 0, {0, 0}, {0, 0, 0, 0} }},
-	{{ {-24, 15, 0}, 0, {0, 0}, {0, 0, 0, 0} }},
-	{{ {-24, 15, 0}, 0, {0, 0}, {0, 0, 0, 0} }},
-	{{ {24, -15, 0}, 0, {0, 0}, {0, 0, 0, 0} }},
 	{{ {24, -15, 0}, 0, {0, 0}, {0, 0, 0, 0} }},
 	{{ {24, 15, 0}, 0, {0, 0}, {0, 0, 0, 0} }},
 	{{ {24, 15, 0}, 0, {0, 0}, {0, 0, 0, 0} }},
+	{{ {24, -15, 0}, 0, {0, 0}, {0, 0, 0, 0} }},
 };
 
 Vtx bob_dl_Flowa_008_mesh_layer_4_vtx_0[4] = {
@@ -6087,7 +6087,7 @@ Gfx mat_bob_dl_f3dlite_material_022[] = {
 	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, bob_dl_Stone_ia8),
 	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 511, 512),
-	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
+	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 124),
 	gsSPEndDisplayList(),
 };

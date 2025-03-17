@@ -13,6 +13,7 @@ static struct ObjectHitbox sBobombHitbox = {
 };
 
 void bhv_bobomb_init(void) {
+    o->header.gfx.sharedChild = gLoadedGraphNodes[MODEL_BLACK_BOBOMB];
     o->oGravity = 2.5f;
     o->oFriction = 0.8f;
     o->oBuoyancy = 1.3f;
