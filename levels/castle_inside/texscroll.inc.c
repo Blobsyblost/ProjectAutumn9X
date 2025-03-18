@@ -1,6 +1,6 @@
 void scroll_castle_inside_dl_Wate_mesh_layer_5_vtx_0() {
 	int i = 0;
-	int count = 4;
+	int count = 10;
 	int width = 32 * 0x20;
 	int height = 32 * 0x20;
 
@@ -10,8 +10,8 @@ void scroll_castle_inside_dl_Wate_mesh_layer_5_vtx_0() {
 	int deltaY;
 	Vtx *vertices = segmented_to_virtual(castle_inside_dl_Wate_mesh_layer_5_vtx_0);
 
-	deltaX = (int)(0.05000000074505806 * 0x20) % width;
-	deltaY = (int)(0.05000000074505806 * 0x20) % height;
+	deltaX = (int)(0.10000000149011612 * 0x20) % width;
+	deltaY = (int)(0.10000000149011612 * 0x20) % height;
 
 	if (absi(currentX) > width) {
 		deltaX -= (int)(absi(currentX) / width) * width * signum_positive(deltaX);
