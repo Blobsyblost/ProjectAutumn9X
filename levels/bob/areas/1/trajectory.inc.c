@@ -1,24 +1,10 @@
 // 0x07011530
 const Trajectory bob_seg7_metal_ball_path0[] = {
-    TRAJECTORY_POS(0, /*pos*/  1535,  3839, -5561),
-    TRAJECTORY_POS(1, /*pos*/  1514,  3804, -5886),
-    TRAJECTORY_POS(2, /*pos*/  1927,  3827, -6232),
-    TRAJECTORY_POS(3, /*pos*/  2717,  3715, -6740),
-    TRAJECTORY_POS(4, /*pos*/  3113,  3668, -6918),
-    TRAJECTORY_POS(5, /*pos*/  3503,  3638, -6783),
-    TRAJECTORY_POS(6, /*pos*/  4863,  3354, -5954),
-    TRAJECTORY_POS(7, /*pos*/  5081,  3221, -5754),
-    TRAJECTORY_POS(8, /*pos*/  5118,  3209, -5481),
-    TRAJECTORY_POS(9, /*pos*/  5147,  3185, -3712),
-    TRAJECTORY_POS(10, /*pos*/  5016,  3149, -3370),
-    TRAJECTORY_POS(11, /*pos*/  4609,  3137, -3118),
-    TRAJECTORY_POS(12, /*pos*/  3075,  2909, -2345),
-    TRAJECTORY_POS(13, /*pos*/  2784,  1634, -2237),
-    TRAJECTORY_POS(14, /*pos*/  1926,  1505, -1139),
-    TRAJECTORY_POS(15, /*pos*/   517,   773,  -438),
-    TRAJECTORY_POS(16, /*pos*/ -1275,   179,   -83),
-    TRAJECTORY_POS(17, /*pos*/ -2089,     5,   -24),
-    TRAJECTORY_END(),
+	TRAJECTORY_POS( 0, -6357, -3925, -9237),
+	TRAJECTORY_POS( 1, -6085, 148, -9243),
+	TRAJECTORY_POS( 2, -5841, 554, -9069),
+	TRAJECTORY_POS( 3, -5404, 657, -8980),
+	TRAJECTORY_END(),
 };
 
 // 0x070115C4
