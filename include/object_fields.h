@@ -1111,6 +1111,7 @@
 
 /* Beta Trampoline */
 #define /*0x110*/ oBetaTrampolineMarioOnTrampoline OBJECT_FIELD_S32(0x22)
+#define /*0x111*/ oBetaTrampolineAdditiveYVel      OBJECT_FIELD_F32(0x23)
 
 /* Treasure Chest */
 #define /*0x0F4*/ oTreasureChestNumOpenedChests OBJECT_FIELD_S32(0x1B)

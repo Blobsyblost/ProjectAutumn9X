@@ -6,6 +6,10 @@
 #include "types.h"
 #include "make_const_nonconst.h"
 
+#include "springboard/model.inc.c"
+#include "springboard/collision.inc.c"
+UNUSED static const u64 binid_17 = 17;
+
 #include "blue_coin_switch/model.inc.c"
 #include "blue_coin_switch/collision.inc.c"
 UNUSED static const u64 binid_0 = 0;
@@ -73,9 +77,8 @@ UNUSED static const u64 binid_15 = 15;
 #include "exclamation_box_outline/collision.inc.c"
 UNUSED static const u64 binid_16 = 16;
 
-#include "test_platform/model.inc.c"
-#include "test_platform/collision.inc.c"
-UNUSED static const u64 binid_17 = 17;
+
 
 #include "koopa_shell/model.inc.c"
 UNUSED static const u64 binid_18 = 18;
+

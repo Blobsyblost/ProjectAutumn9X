@@ -18,6 +18,8 @@ const GeoLayout bob_area_3_geo[] = {
 		GEO_OPEN_NODE(),
 			GEO_DISPLAY_LIST(LAYER_ALPHA, bob_dl_RCP_dokan_001_mesh_layer_4),
 		GEO_CLOSE_NODE(),
+		GEO_TRANSLATE_NODE_WITH_DL(LAYER_OPAQUE, -4814, 1125, -11059, bob_dl_RCP_dokan_002_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(LAYER_OPAQUE, -3299, 621, -9, bob_dl_slip_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };

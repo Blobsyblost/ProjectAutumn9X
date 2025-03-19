@@ -143,7 +143,7 @@ Gfx *geo_move_mario_part_from_parent(s32 callContext, UNUSED struct GraphNode *n
 #include "behaviors/heave_ho.inc.c"
 #include "behaviors/spawn_star_exit.inc.c"
 #include "behaviors/unused_poundable_platform.inc.c"
-#include "behaviors/beta_trampoline.inc.c"
+#include "behaviors/springboard.inc.c"
 #include "behaviors/jumping_box.inc.c"
 #include "behaviors/boo_cage.inc.c"
 
