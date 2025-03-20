@@ -3856,7 +3856,7 @@ const BehaviorScript bhvBetaHoldableObject[] = {
     OR_INT(oFlags, (OBJ_FLAG_HOLDABLE | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
     SET_INT(oInteractType, INTERACT_GRABBABLE),
     DROP_TO_FLOOR(),
-    SET_HITBOX(/*Radius*/ 40, /*Height*/ 50),
+    SET_HITBOX(/*Radius*/ 60, /*Height*/ 60),
     CALL_NATIVE(bhv_beta_holdable_object_init),
     BEGIN_LOOP(),
         SET_INT(oIntangibleTimer, 0),

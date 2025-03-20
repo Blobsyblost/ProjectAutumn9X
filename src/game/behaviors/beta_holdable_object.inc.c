@@ -1,19 +1,8 @@
+#include "src/game/print.h"
 
-/**
- * Behavior for bhvBetaHoldableObject.
- * This is a simple implementation of a holdable object, probably used
- * for testing. This was previously assumed to be a beta shell, as there
- * are unused shell models left in the game; however, there is no evidence
- * to support this theory.
- */
-
-/**
- * Initialization function for bhvBetaHoldableObject.
- * Just sets various physics constants for the object.
- */
 void bhv_beta_holdable_object_init(void) {
     o->oGravity = 2.5f;
-    o->oFriction = 0.8f;
+    o->oFriction = 0.9f;
     o->oBuoyancy = 1.3f;
 }
 
@@ -40,12 +29,13 @@ static void beta_holdable_object_throw(void) {
 
     o->oHeldState = HELD_FREE;
 
-    // This flag is never set, why is it cleared?
-    o->oFlags &= ~OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW;
+
 
     // Set initial velocity
     o->oForwardVel = 40.0f;
     o->oVelY = 20.0f;
+
+
 }
 
 /**
@@ -58,6 +48,7 @@ void bhv_beta_holdable_object_loop(void) {
         case HELD_FREE:
             // Apply standard physics
             object_step();
+
             break;
 
         case HELD_HELD:
@@ -67,10 +58,18 @@ void bhv_beta_holdable_object_loop(void) {
 
         case HELD_THROWN:
             beta_holdable_object_throw();
+
             break;
 
         case HELD_DROPPED:
             beta_holdable_object_drop();
             break;
+    }
+if (o->oForwardVel >= 1) {
+    o->oFaceAngleYaw = o->oFaceAngleYaw + (o->oForwardVel * 200);
+    o->oFaceAngleRoll = o->oFaceAngleRoll + (o->oForwardVel * 200);
+    o->oFaceAnglePitch = o->oFaceAnglePitch + (o->oForwardVel * 200);
+
+
     }
 }
