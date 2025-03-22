@@ -22,7 +22,7 @@ const GeoLayout bob_area_2_geo[] = {
 		GEO_BILLBOARD_WITH_PARAMS_AND_DL(LAYER_ALPHA, -716, 2535, 3813, bob_dl_Flowa_013_mesh_layer_4),
 		GEO_BILLBOARD_WITH_PARAMS_AND_DL(LAYER_ALPHA, 52, 2503, 4249, bob_dl_Flowa_014_mesh_layer_4),
 		GEO_BILLBOARD_WITH_PARAMS_AND_DL(LAYER_ALPHA, -533, 2503, 3671, bob_dl_Flowa_015_mesh_layer_4),
-		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_ALPHA, 20880, 0, 0, -90, 0, 0, bob_dl_Plane_005_mesh_layer_4),
+		GEO_TRANSLATE_NODE_WITH_DL(LAYER_ALPHA, 20880, 0, 0, bob_dl_Plane_005_mesh_layer_4),
 		GEO_TRANSLATE_NODE_WITH_DL(LAYER_OPAQUE, 20880, 0, 0, bob_dl_Xhomp_s_mesh_layer_1),
 		GEO_OPEN_NODE(),
 			GEO_DISPLAY_LIST(LAYER_ALPHA, bob_dl_Xhomp_s_mesh_layer_4),

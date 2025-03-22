@@ -7,6 +7,7 @@ const GeoLayout ddd_area_1_geo[] = {
 		GEO_DISPLAY_LIST(LAYER_OPAQUE, ddd_dl_Cube_mesh_layer_1),
 		GEO_DISPLAY_LIST(LAYER_ALPHA, ddd_dl_Cube_mesh_layer_4),
 		GEO_TRANSLATE_NODE_WITH_DL(LAYER_OPAQUE, -150, -1407, -3525, ddd_dl_Cube_001_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(LAYER_OPAQUE, 0, 184, 0, ddd_dl_Cube_002_mesh_layer_1),
 		GEO_TRANSLATE_NODE_WITH_DL(LAYER_ALPHA, -163, -100, 10248, ddd_dl_Plane_001_mesh_layer_4),
 		GEO_TRANSLATE_NODE_WITH_DL(LAYER_TRANSPARENT, -5653, -797, 687, ddd_dl_Water_Box_Mesh_mesh_layer_5),
 		GEO_TRANSLATE_NODE_WITH_DL(LAYER_TRANSPARENT, -5653, -3151, 687, ddd_dl_Water_Box_Mesh_001_mesh_layer_5),
